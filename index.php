@@ -37,4 +37,12 @@
             'distance_to_center' => 50
         ],
     ];
+
+    foreach($hotels as $hotel):
+        foreach($hotel as $hotelFeatures):
+        ?>
+        <p><?php echo $hotelFeatures;?></p>
+        <?php
+        endforeach;
+    endforeach;
 ?>
