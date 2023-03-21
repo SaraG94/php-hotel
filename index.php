@@ -65,14 +65,21 @@
         ?>
             <!-- creo una riga per ogni hotel -->
             <tr>
+                <!-- creo una colonna per ogni caratteristica dell'hotel -->
+                <td class="text-center"><?php echo $hotel['name'];?></td>
+                <td class="text-center"><?php echo $hotel['description'];?></td>
+                <td class="text-center"><?php echo $hotel['parking'] == true ? 'Si': 'No';?></td>
+                <td class="text-center"><?php echo $hotel['vote'];?></td>
+                <td class="text-center"><?php echo $hotel['distance_to_center'];?> Km</td>
+
+                <!-- altra soluzione:
                 <?php        
                     foreach($hotel as $hotelFeatures):
                 ?>
-                <!-- creo una colonna per ogni caratteristica dell'hotel -->
-                <td class="text-center"><?php echo $hotelFeatures;?></td>
+                    <td class="text-center"><?php echo $hotelFeatures;?></td>
                 <?php
                     endforeach;
-                ?>
+                ?> -->
             </tr>
         <?php        
             endforeach;
